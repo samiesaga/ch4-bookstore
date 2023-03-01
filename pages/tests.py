@@ -1,9 +1,10 @@
 from django.test import TestCase
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
+from .views import HomePageView
 # Create your tests here.
 
-class HomepageTests(SimpleTestCase):
+class HomepageTests ( SimpleTestCase ):
     def setUp(self):
         url = reverse("home")
         self.response = self.client.get(url)
